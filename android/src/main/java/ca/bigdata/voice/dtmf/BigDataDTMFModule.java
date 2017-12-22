@@ -50,6 +50,8 @@ public class BigDataDTMFModule extends ReactContextBaseJavaModule {
     constants.put("DTMF_D", ToneGenerator.TONE_DTMF_D);
     constants.put("DTMF_S", ToneGenerator.TONE_DTMF_S);
     constants.put("DTMF_P", ToneGenerator.TONE_DTMF_P);
+    constants.put("DTMF_RINGBACK", ToneGenerator.TONE_CDMA_NETWORK_USA_RINGBACK);
+    constants.put("DTMF_BUSYTONE", ToneGenerator.TONE_CDMA_NETWORK_BUSY);
     return constants;
   }
 
