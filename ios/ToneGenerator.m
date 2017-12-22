@@ -37,7 +37,15 @@ void startTone(int dtmf, int durationMs) {
     case DTMF_3: case DTMF_6: case DTMF_9: case DTMF_P: freq2 =  1477; break;
     case DTMF_A: case DTMF_B: case DTMF_C: case DTMF_D: freq2 =  1633; break;
   }
-  
+    
+  if (dtmf == DTMF_RINGBACK) {
+      freq1 = 440;
+      freq2 = 480;
+  } else if (dtmf == DTMF_BUSYTONE) {
+      freq1 = 480;
+      freq2 = 620;
+  }
+    
   samplesPerSine = sampleRate / freq1;
   sineMultiplierPerSample = M_2PI / samplesPerSine;
   samplesPerSine_2nd = sampleRate / freq2;

@@ -27,7 +27,8 @@ void stopTone();
 
 typedef enum {
   DTMF_1, DTMF_2, DTMF_3, DTMF_4, DTMF_5, DTMF_6, DTMF_7, DTMF_8, DTMF_9, DTMF_0,
-  DTMF_A, DTMF_B, DTMF_C, DTMF_D, DTMF_S, DTMF_P
+  DTMF_A, DTMF_B, DTMF_C, DTMF_D, DTMF_S, DTMF_P,
+  DTMF_RINGBACK, DTMF_BUSYTONE
 } DTMF_TONES;
 
 #endif /* ToneGenerator_h */

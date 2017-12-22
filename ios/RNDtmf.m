@@ -29,6 +29,8 @@ RCT_EXPORT_MODULE()
     @"DTMF_B": [NSNumber numberWithInteger:DTMF_B],
     @"DTMF_C": [NSNumber numberWithInteger:DTMF_C],
     @"DTMF_D": [NSNumber numberWithInteger:DTMF_D],
+    @"DTMF_RINGBACK": [NSNumber numberWithInteger:DTMF_RINGBACK],
+    @"DTMF_BUSYTONE": [NSNumber numberWithInteger:DTMF_BUSYTONE],
   };
 }
 
