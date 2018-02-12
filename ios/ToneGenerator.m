@@ -7,6 +7,7 @@
 //
 
 #import "ToneGenerator.h"
+#import <AVFoundation/AVFoundation.h>
 
 static AudioUnit toneUnit;
 static double sampleRate = 8000.0;
@@ -75,7 +76,13 @@ void stopTone() {
 }
 
 void initialize() {
-  
+  // Configure the audio session first
+  AVAudioSession *session = [AVAudioSession sharedInstance];
+  NSError *setCategoryError = nil;
+  [session setCategory:AVAudioSessionCategoryPlayAndRecord
+           withOptions:AVAudioSessionCategoryOptionMixWithOthers
+                 error:&setCategoryError];
+
   // Configure the search parameters to find the default playback output unit
   // (called the kAudioUnitSubType_RemoteIO on iOS but
   // kAudioUnitSubType_DefaultOutput on Mac OS X)
